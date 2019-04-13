@@ -1,0 +1,30 @@
+<style>
+    div > first-child{
+        border:1px solid rebeccapurple;
+        padding: 10px;
+        font-size: 2rem;
+    }
+    div:last-child{
+        border: 10px;
+    }
+    div[test="abc"]{
+        border: 1px solid;
+        background-color: black;
+        margin: 10%;
+        padding: 30px;
+        color: white;
+    }
+</style>
+<body>
+    <div>
+        <div>
+            <h1>hello</h1>
+            <h1>world</h1>
+        </div>
+    </div>
+    <div>
+        <div test="abc">
+            <h1>hello</h1>
+        </div>
+    </div>
+</body>

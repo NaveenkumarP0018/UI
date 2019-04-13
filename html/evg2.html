@@ -1,0 +1,16 @@
+<div id="container"> 
+    <ol>
+        <li>mango</li>
+    </ol>
+</div>
+<button onclick="generate()">Generate Ele</button>
+<script>
+    function generate(){
+
+    var pEle = document.createElement("div");
+    var textEle = document.createTextNode("VBM INFO TECH");
+    pEle.appendChild(textEle);
+    var x=document.getElementsByTagName("div")[0].getAttribute("id")
+    document.getElementById("container").innerHTML = x;
+    }
+</script>

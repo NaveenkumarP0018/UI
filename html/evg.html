@@ -1,0 +1,11 @@
+<div id="container"></div>
+<button onclick="generate()">Generate Ele</button>
+<script>
+    function generate(){
+
+    var pEle = document.createElement("div");
+    var textEle = document.createTextNode("VBM INFO TECH");
+    pEle.appendChild(textEle);
+    document.getElementById("container").appendChild(pEle)
+    }
+</script>

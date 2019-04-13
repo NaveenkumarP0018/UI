@@ -1,0 +1,262 @@
+<html>
+    <head>
+        <title>online job application form</title>
+    </head>
+    <style>
+        body{
+            background-color: yellow;
+            margin: 0;
+        }
+        h2{
+            background-color: tomato;
+            color:white;
+            text-align: center;
+            padding: 10px;
+        }
+        td{
+            padding: 7px;
+        }
+        input{
+            height: 25px;
+            border-radius: 10px;
+        }
+        input:focus,textarea:focus{
+            outline: none;
+            border: 1px solid red;
+        }
+        textarea{
+            border-radius: 10px;
+        }
+        .button{
+            background-color: darkblue;
+            font-size: 20px;
+            color: white;
+            padding: 0px 20px;
+            border: none;
+        }
+        .button:hover{
+            cursor: pointer;
+            box-shadow: 5px 5px 5px red;
+        }
+    </style>
+    <body>
+        <h1 align="center">MLA Applicatin Form</h1>
+        <form>
+        <div id=personal>
+            <h2>personal details</h2>
+            <table width=100%>
+                <tr>
+                        <td>firstname</td>
+                        <td><input type="text" ></td>
+                            <td>middlename</td>
+                            <td><input type="text" ></td>
+                            
+                            <td>lastname</td>
+                            <td><input type="text" ></td> 
+                 </tr>
+
+                 <tr>
+                     
+                            <td>father's name</td>
+                            <td><input type="text" ></td> 
+                            <td>mother's name</td>
+                            <td><input type="text" ></td> 
+                     
+                 </tr>   
+                 
+                 <tr>
+                     <td>current adress</td>
+                     <td><textarea  rows="5" column="30"> </textarea></td>
+                        <td>perminent adress</td>
+                        <td><textarea  rows="5" column="30"> </textarea></td>
+                </tr>
+                <tr>
+                    <td>phone number</td>
+                </tr>
+                <tr>
+                    <td>homeno</td>
+                    <td><input type="number"></td>
+
+                    <td>perno</td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <td>date-of-birth</td>
+                    <td><input type="date"> </td>
+                    <td>place of birth</td>
+                    <td><input type="text"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2">select gender</td>
+                    <td><input type="radio" value="gender">Male </td>
+                    <td><input type="radio" value="gender">Female </td>
+                </tr>
+                <tr>
+                    <td>Highest qualification</td>
+                    <td><input type="text"> </td>
+                    <td>year of passing</td>
+                    <td><input type="date"> </td>
+                </tr>
+                <tr>
+                    <td colspan="2">languages known</td>
+                    <td><input type="radio">English </td>
+                    <td><input type="radio">Hindi</td>
+                    <td><input type="radio">Telugu </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Hobbies</td>
+                    <td><input type="radio">Reading books </td>
+                    <td><input type="radio">Playing online games</td>
+                    <td><input type="radio">Browsing</td>
+                </tr>
+                <tr>
+                    <td>Yourself</td>
+                    <td><textarea  rows="5" column="40"> </textarea></td>
+                </tr>
+                <tr>
+                    <td>Nationality</td>
+                    <td>
+                        <select>
+                            <option>Indian</option>
+                            <option>Hindu</option>
+                            <option>Muslim</option>
+                            <option>Cristian</option>
+                        </select>
+                    </td>   
+                </tr>
+                <td>Adharcardnumber</td>
+                <td><input type="number"> </td>
+                <td>Pancardnumber</td>
+                <td><input type="number"> </td>
+        </table>
+        </div>
+        <div>
+            <h2>Education details</h2>
+            <table width="100%">
+                <tr>
+                    <td>sno</td>
+                    <td>Qualification</td>
+                    <td>institute/university</td>
+                    <td>yearofpassing</td>
+                    <td>marks</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><input type="text"> </td>
+                    <td><input type="text"> </td>
+                    <td><input type="date"> </td>
+                    <td><input type="number"> </td>
+                </tr>
+                <tr>
+                        <td>2</td>
+                        <td><input type="text"> </td>
+                        <td><input type="text"> </td>
+                        <td><input type="date"> </td>
+                        <td><input type="number"> </td>
+                    </tr>
+                    <tr>
+                            <td>3</td>
+                            <td><input type="text"> </td>
+                            <td><input type="text"> </td>
+                            <td><input type="date"> </td>
+                            <td><input type="number"> </td>
+                        </tr>
+                        <tr>
+                                <td>4</td>
+                                <td><input type="text"> </td>
+                                <td><input type="text"> </td>
+                                <td><input type="date"> </td>
+                                <td><input type="number"> </td>
+                            </tr>
+            </table>
+        </div>
+        <div>
+            <h2>SARPANCH(optional)</h2>
+            <table width="100%">
+                    <tr>
+                            <td>sno</td>
+                            <td>Grampanchayat</td>
+                            <td>role</td>
+                            <td>Duration(from-to)</td>
+                        </tr>
+                        <tr>
+                                <td>1</td>
+                                <td><textarea  rows="5" column="40"> </textarea></td>
+                                <td><textarea  rows="5" column="40"> </textarea></td>
+                                <td><input type="date"> </td>
+                                <td><input type="date"> </td>
+                            </tr>
+            </table>
+
+        </div>
+        <div>
+                <h2>MPTC(optional)</h2>
+                <table width="100%">
+                        <tr>
+                                <td>sno</td>
+                                <td>Mandal Name</td>
+                                <td>role</td>
+                                <td>Duration(from-to)</td>
+                            </tr>
+                            <tr>
+                                    <td>1</td>
+                                    <td><textarea  rows="5" column="40"> </textarea></td>
+                                    <td><textarea  rows="5" column="40"> </textarea></td>
+                                    <td><input type="date"> </td>
+                                    <td><input type="date"> </td>
+                                </tr>
+                </table>
+    
+            </div>
+            <div>
+                    <h2>ZPTC(optional)</h2>
+                    <table width="100%">
+                            <tr>
+                                    <td>sno</td>
+                                    <td>District Name</td>
+                                    <td>role</td>
+                                    <td>Duration(from-to)</td>
+                                </tr>
+                                <tr>
+                                        <td>1</td>
+                                        <td><textarea  rows="5" column="40"> </textarea></td>
+                                        <td><textarea  rows="5" column="40"> </textarea></td>
+                                        <td><input type="date"> </td>
+                                        <td><input type="date"> </td>
+                                    </tr>
+                    </table>
+        
+                </div>
+                <div>
+                        <h2>MLA(optional)</h2>
+                        <table width="100%">
+                                <tr>
+                                        <td>sno</td>
+                                        <td>District Name</td>
+                                        <td>role</td>
+                                        <td>Duration(from-to)</td>
+                                    </tr>
+                                    <tr>
+                                            <td>1</td>
+                                            <td><textarea  rows="5" column="40"> </textarea></td>
+                                            <td><textarea  rows="5" column="40"> </textarea></td>
+                                            <td><input type="date"> </td>
+                                            <td><input type="date"> </td>
+                                        </tr>
+                        </table>
+            
+                    </div>
+                <div>
+                    <table>
+                            <tr>
+                                    <td></td>
+                                    <td><input type="button" value="submit" class="button"></td>
+                                    <td><input type="button" value="reset" class="button"></td>
+                                    <td></td>
+                                </tr>
+                    </table>
+                </div>
+            </table>
+    </form>
+    </body>
+</html>
