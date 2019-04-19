@@ -1,0 +1,92 @@
+<html>
+    <body>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+      <style>
+        body{
+            margin: 0;
+        }
+        .header{
+            background-color:blue;
+        }
+        #x{
+            float: right;
+            color: white;
+            padding: 40px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content:space-around;
+        }
+        .container-main {
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 5px 10px #888888;
+        }
+    
+    </style>
+
+
+    <div class="header">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkie1qHWnsUb3zO5uyHVTs7g7UncSOvHOT_D69trRwHP0NFj1CZA">
+        <a id="x"><h1>Logout</h1></a>
+    </div>
+    <div class="container-main">
+        <ul>
+            <li onclick="fetchData()"><a href="#">Home</a></li>
+            <li onclick="list()"><a href="#">services</a></li>
+        </ul>
+    </div>
+    <table class="table table-bordered">
+            
+        <tbody id="tbody-container">
+        </tbody>
+      </table>      
+      <script>
+
+          function fetchData(){
+            var http = new XMLHttpRequest();
+            http.open("GET", "http://jsonplaceholder.typicode.com/users");
+            http.send();
+
+            http.onreadystatechange = function(e){
+            console.log(this.readyState);
+            console.log(this.state);
+
+            if(this.readyState == 4 && this.status == 200){
+
+                console.log(this.responseText)
+                createTemplate(JSON.parse(this.responseText));
+                }
+            }
+        }
+        function createTemplate(data){
+        var bodyTempl = " ";
+            for(var i = 0; i < data.length; i++){
+                bodyTempl += 
+                "<tr>" +
+                        "<td>" + data[i].id + "</td>" + 
+                        "<td>" + data[i].name + "</td>" + 
+                        "<td>" + data[i].phone + "</td>" + 
+                        "<td>" + data[i].email + "</td>" +
+                        "<td>" + data[i].address.city + "</td>"  +
+                        "</tr>";
+            }
+        document.getElementById("tbody-container").innerHTML = bodyTempl;
+        }
+  
+ </script>
+      
+
+
+
+
+
+
+
+    </body>
+</html>

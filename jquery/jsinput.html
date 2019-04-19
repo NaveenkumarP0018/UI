@@ -10,12 +10,11 @@
       
        
       
-        <input id="search" class="form-control"  onkeyup="searchbyname()">
+        <input id="search" class="form-control"  onkeypress="searchbyname()">
         <div id="container"></div>  
       <script>
-          function searchbyname(event){
-            var value=document.getElementById("search").value;
-            fetchData(value)
+          function searchvalue(event){
+              var value=document.getElementById("search").value;
           }
           function fetchData(value){
             var http = new XMLHttpRequest();
@@ -27,12 +26,15 @@
 
                 console.log(this.responseText)
                 data=JSON.parse(this.responseText);
-                fil=data.filter(function(user,index){
+                data=data.filter(function(user,index){
                     return user.name.includes(value)
                 })
-                createTemplate(fil);
+                createTemplate(JSON.parse(this.responseText));
                 }
             }
+        }
+        function searchbyname() {
+        fetchData();
         }
         function createTemplate(data){
         var bodyTempl = " ";
