@@ -7,7 +7,7 @@
      <input class="form-control" id="search" onkeyup="searchdata1()">
      <div id="con"></div>
      <script>
-        function searchdata1(event){
+        function searchdata1(){
             var word=document.getElementById("search").value;
             featchdata(word);
 
@@ -20,8 +20,8 @@
             http.onreadystatechange=function(){
                 var response=this.responseText;
                 var data=JSON.parse(response);
-                data=data.filter(function(user,index){
-                    return user.name.includes(word);
+                data=data.filter(function(a,b){
+                    return a.name.includes(word);
                 });
                 createTemplate(data);
             }
