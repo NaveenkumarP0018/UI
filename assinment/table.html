@@ -26,6 +26,7 @@
             border: 1px solid;
             padding: 10px;
             box-shadow: 5px 10px #888888;
+
         }
     
     </style>
@@ -37,7 +38,7 @@
     </div>
     <div class="container-main">
         <ul>
-            <li onclick="fetchData()"><a href="#">Home</a></li>
+            <li onclick="tabledata()"><a href="#">Home</a></li>
             <li onclick="list()"><a href="#">services</a></li>
         </ul>
     </div>
@@ -63,15 +64,15 @@
                 data=JSON.parse(this.responseText);
                 }
             }
-            function list(){
+            function tabledata(){
                 var data1=data;
                 createTemplate(data1);
             }
-            function fetchData(){
+            function list(){
                 var data1=data;
-                createTemplate1(data1)
+                createTemplate1(data1);
+                document.getElementById("")
             }
-        
         function createTemplate(data){
         var bodyTempl = " ";
             for(var i = 0; i < data.length; i++){
@@ -85,6 +86,7 @@
                         "</tr>";
             }
         document.getElementById("tbody-container").innerHTML = bodyTempl;
+        document.getElementById("con").innerHTML="";
         }
         function createTemplate1(data){
             var temp=" ";
@@ -94,6 +96,7 @@
 "</ul>"
         }
         document.getElementById("con").innerHTML=temp;
+        document.getElementById("tbody-container").innerHTML="";
 
         }
   
