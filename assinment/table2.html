@@ -8,17 +8,17 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Home page</title>
   </head>
   <body>
-        <style>
+        <style>   
                 .header{
                     background-color:blue;
                 }
                 #x{
                     float: right;
                     color: white;
-                    padding: 40px;
+                    padding: 20px;
                 }
                 .my{
                     height: 100vh;
@@ -29,32 +29,85 @@
                 ul{
                     list-style: none;
                 }
+                img{
+                    width: 25%;
+                }
+                marquee{
+                  padding: 5px;
+                  font-size:2rem;
+                }
+                #main-footer {
+                  position: fixed;
+                   left: 0;
+                  bottom: 0;
+                  width: 100%;
+                  float: right;
+                  text-align: center;
+                }
             </style>
         
         
             <div class="header">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkie1qHWnsUb3zO5uyHVTs7g7UncSOvHOT_D69trRwHP0NFj1CZA">
-                <a id="x"><h1>Logout</h1></a>
+                    <img src="/home/naveen/Desktop/UI/project/logo.jpeg">
+
+                    <div class="spinner-grow text-success" role="status">
+                            <span class="sr-only">Loading...</span>
+                          </div>
+                <div class="spinner-grow text-warning float-right" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
+                <a href="/home/naveen/Desktop/UI/Bootstrap/log2.html"id="x" class="logout"><h4>Logout</h4></a>
             </div>
+            
             <div class="container-main">
                     <div class="row">
-                      <div class="col-md-2 bg-success my">
+                      <div class="col-md-2 bg-info my">
                             <ul>
-                                    <li class="ml-3 pt-3" onclick="tabledata()"><a href="#">Home</a></li>
-                                    <li class="ml-3 pt-3" onclick="list()"><a href="#">services</a></li>
+                                    <li class="ml-3 pt-3" onclick="tabledata()">
+
+                                        
+                                    <div class="spinner-grow text-danger " role="status">
+                                      <span class="sr-only">Loading...</span>
+                                    </div>
+                                    <a class="text-white" href="#">Home</a>
+                                    </li>
+                                    <li class="ml-3 pt-3" onclick="list()">
+                                            <div class="spinner-grow text-white " role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                  </div>
+
+                                        <a class="text-white" href="#">services                            
+                                    </a></li>
+                                    <li class="ml-3 pt-3" onclick="tablecard()">
+                                            <div class="spinner-grow text-success " role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                  </div>
+                            
+                                        <a class="text-white" href="#"> About</a></li>
+
                                 </ul>
                       </div>
                       <div class="col-md-10 ">
-                            <table class="table table-bordered">
+                          <marquee class="bg-warning">WelCome To VBM-INFO-TECH</marquee>
+                          <div id="main-footer">
+                              <p style="text-align:center">All Rights Resvered <sup>&reg;</sup></p>
+                              <p style="text-align:center">Developed & maintained by NAVEEN CHOWDARY</p>
+                          </div>
+                          <div class="table">
+                            <table class="table table-bordered ">
             
                                     <tbody id="tbody-container">
                                     </tbody>
                                   </table>
-                                  <div id="con"></div>      
+                                </div>      
+                                  <div id="con"></div>
+                                  <div id="data"></div>
+
+                            
                                 
                       </div>
                     </div>
-                  </div>
+                  </div>              
                   <script>
 
                         var http = new XMLHttpRequest();
@@ -79,16 +132,31 @@
                             var data1=data;
                             createTemplate1(data1);
                         }
+                        function tablecard(){
+                          document.getElementById("tbody-container").innerHTML="";
+                          document.getElementById("con").innerHTML="";
+
+
+                        }
                     function createTemplate(data){
                     var bodyTempl = " ";
+                     var bodyTempl="<thead>"+
+                        "<tr class='bg-success'>"+
+                        "<th>id</th>"+
+                        "<th>Name</th>"+
+                        "<th>Phone</th>"+
+                        "<th>Email</th>"+
+                        "<th>Address</th>"+
+                        "</tr>"+
+                    "</thead>"
                         for(var i = 0; i < data.length; i++){
                             bodyTempl += 
                             "<tr>" +
-                                    "<td>" + data[i].id + "</td>" + 
+                                    "<td class='bg-danger'>" + data[i].id + "</td>" + 
                                     "<td>" + data[i].name + "</td>" + 
-                                    "<td>" + data[i].phone + "</td>" + 
+                                    "<td class='bg-info'>" + data[i].phone + "</td>" + 
                                     "<td>" + data[i].email + "</td>" +
-                                    "<td>" + data[i].address.city + "</td>"  +
+                                    "<td class='bg-warning'>" + data[i].address.city + "</td>"  +
                                     "</tr>";
                         }
                     document.getElementById("tbody-container").innerHTML = bodyTempl;
@@ -96,9 +164,10 @@
                     }
                     function createTemplate1(data){
                         var temp=" ";
+                        var temp="<h2>List Of The Names</h2>"
                         for(var i=0;i<data.length;i++){
-                        temp +="<ul class='list-group'>"+
-              "<li class='list-group-item'>"+data[i].name+"</li>"+
+                        temp +="<ul class='list-group bg-danger text-success'>"+
+              "<li class='list-group-item '>"+data[i].name+"</li>"+
             "</ul>"
                     }
                     document.getElementById("con").innerHTML=temp;
