@@ -21,7 +21,7 @@
             console.log(this.readyState);
             console.log(this.state);
 
-            if(this.readyState == 4 && this.status == 200){
+            if(this.readyState == 4){
                 console.log(this.responseText)
                 createTemplate(JSON.parse(this.responseText));
             }
