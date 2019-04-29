@@ -1,0 +1,28 @@
+<script>
+    var limit=25;
+    var f1=0;
+    var f2=1;
+    var f3;
+    for(var i=0;i<limit;i++){
+        f3=f1+f2;
+        document.write(f3 +"<br>");
+        f1=f2;
+        f2=f3;
+
+    }
+</script>
+
+<script>
+    function fab(val){
+        var f1=0;
+        var f2=1;
+        var f3;
+        for(var i=0;i<val;i++){
+            f3=f1+f2;
+            document.write(f3 + "<br>")
+            f1=f2;
+            f2=f3;
+        }
+    }
+    fab(10)
+</script>

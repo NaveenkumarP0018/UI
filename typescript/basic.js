@@ -60,21 +60,23 @@ var Employee = /** @class */ (function () {
         this.fullName = name;
     }
     Employee.prototype.toString = function () {
-        console.log("EMP ID of " + name);
+        console.log("EMP ID of " + name + ":" + this.empID);
     };
     return Employee;
 }());
-var Customer = /** @class */ (function () {
-    function Customer(cID, name) {
-        this.custID = cID;
-        this.fullName = name;
-    }
-    Customer.prototype.toString = function () {
-        console.log("Customer ID of " + name);
-    };
-    return Customer;
-}());
+// 
 var employee = new Employee("E001", "Kunal");
 console.log(employee);
-var customer = new Customer("C001", "");
-console.log(customer);
+//   class Customer implements Person {
+//     custID: string;
+//     fullName: string;
+//     constructor (cID: string, name: string) {
+//      this.custID = cID;
+//      this.fullName = name;
+//     }
+//     toString() {
+//      console.log(`Customer ID of ${name}`);
+//     }
+//    }
+// let customer: Person = new Customer("C001", "");
+// console.log(customer)

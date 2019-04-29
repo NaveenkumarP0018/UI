@@ -82,22 +82,22 @@ class Employee implements Person {
      this.fullName = name;
     }
     toString() {
-     console.log(`EMP ID of ${name}`);
+     console.log(`EMP ID of ${name}:${this.empID}`);
     }
    }
-   class Customer implements Person {
-    custID: string;
-    fullName: string;
-    constructor (cID: string, name: string) {
-     this.custID = cID;
-     this.fullName = name;
-    }
-    toString() {
-     console.log(`Customer ID of ${name}`);
-    }
-   }
-
+// 
    let  employee: Person = new Employee("E001", "Kunal");
    console.log(employee)
-let customer: Person = new Customer("C001", "");
-console.log(customer)
+//   class Customer implements Person {
+//     custID: string;
+//     fullName: string;
+//     constructor (cID: string, name: string) {
+//      this.custID = cID;
+//      this.fullName = name;
+//     }
+//     toString() {
+//      console.log(`Customer ID of ${name}`);
+//     }
+//    }
+// let customer: Person = new Customer("C001", "");
+// console.log(customer)

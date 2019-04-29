@@ -1,0 +1,9 @@
+<div id="con"></div>
+<script>
+var mul=[5.52,62,100,125,150]
+var mf=mul.filter(multifunction);
+document.getElementById("con").innerHTML=mf;
+function multifunction(value,index){
+    return value%5==0;
+}
+</script>
