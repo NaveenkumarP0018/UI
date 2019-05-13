@@ -1,0 +1,51 @@
+<input type="text" [(ngModel)]="xyz"/>
+    <marquee><h1>{{xyz}}</h1><br></marquee>
+
+<app-header></app-header>
+<br>
+<app-menu></app-menu>
+<br>
+<app-list></app-list>
+<br>
+<app-table></app-table>
+<br>
+ <input type="text" value="{{abc}}" (keyup)="changeMe($event)">
+
+<h1>{{abc}}</h1>
+<br>
+<table> 
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>UserName</th>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>marks</td>
+    </tr>
+    <tr *ngFor="let item of student;">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.marks}}</td>
+    </tr>
+</table>
+
+<div class="container" (click)="doubleHeight($event)">
+</div>
+<div class="sec-container"></div>
+
+<button (click)="get()">getuser</button>
+<h1 *ngIf=user>{{user.length}}</h1>
+<p *ngFor="let a of user">{{a.name}}</p>
+<table>
+    <tr>
+        <td>name</td>
+        <td>id</td>
+    </tr>
+    <tr *ngFor="let a of user">
+        <td>{{a.name}}</td>
+        <td>{{a.id}}</td>
+    </tr>
+</table>
+

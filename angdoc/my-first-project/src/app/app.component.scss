@@ -1,0 +1,25 @@
+table,td{
+    border: 2px orange solid;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+}
+
+.container{
+    height:200px;
+    border: red;
+    background: red;
+    width: 200px;
+    display:inline-block;
+}
+.sec-container{
+    width: 200px;
+    border: 2px solid green;
+    background: blue;
+    display: inline-block;
+
+}

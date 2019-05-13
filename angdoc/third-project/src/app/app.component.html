@@ -1,0 +1,23 @@
+<marquee>VBM INFO TECH</marquee>
+<button (click)="getuser()">user</button>
+    <button (click)="commentuser()">comments</button>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>UserName</th>
+    </tr>
+    <tr *ngFor="let a of user" [ngClass]="getcolor(a.id)">
+        <td class="id">{{a.id}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.username}}</td>
+    </tr>
+</table>
+<table>
+<ul *ngFor="let b of comm" [ngStyle]="{background:setcolor(b.id)}">
+    <li>{{b.id}}</li>
+    <li>{{b.email}}</li>
+    <hr/>
+
+</ul>
+</table>

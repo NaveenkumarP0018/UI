@@ -1,0 +1,30 @@
+<table class="table table-stripped">
+  <tr class="bg-danger">
+    <th>Id</th>
+    <th>Name</th>
+    <th>UserName</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Website</th>
+    <th>Address</th>
+  </tr>
+  <tr *ngFor="let a of user" [ngStyle]="{background:getcolor(a.id)}">
+    <td>{{a.id}}</td>
+    <td>{{a.name}}</td>
+    <td>{{a.username}}</td>
+    <td>{{a.email}}</td>
+    <td>{{a.phone}}</td>
+    <td>{{a.website}}</td>
+    <td>{{a.address.city}}</td>
+  </tr>
+</table>
+<div class="card" style="width: 18rem;">
+    <div class="card-body text-center">
+        <ul class="list-group list-group-flush" *ngFor="let b of comm" [ngClass]="commentid(b.id)">
+            <li class="list-group-items">{{b.id}}</li>
+            <li class="list-group-items">{{b.body}}</li>
+            <hr> 
+
+</ul>          
+    </div>
+  </div>  

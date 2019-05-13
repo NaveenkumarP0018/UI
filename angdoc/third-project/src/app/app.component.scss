@@ -1,0 +1,33 @@
+table,th,tr,td{
+    border: solid 2px green;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 5rem;
+}
+td,th{
+    padding: 10px;
+}
+.id{
+background: red;
+color: white
+}
+th{
+    background: green;
+}
+ul{
+    list-style: none;
+}
+marquee{
+    color: red;
+    font-size:20px;
+    margin-top:20px;
+}
+button{
+    margin-left:100px;
+}
+.green{
+    background:yellow;
+}
+.red{
+    background:pink;
+}
