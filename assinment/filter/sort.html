@@ -1,0 +1,55 @@
+<html> 
+
+<body> 
+	<p>Click on the Sort button to sort the array</p> 
+
+	 button for click event 
+	 onclick event is generated when the button is clicked
+	<p id="demo"></p> 
+
+	<script> 
+
+		// array of names
+		var names = [" Manish", " Rishabh", " Nitika", " Harshita"]; 
+		document.getElementById("demo").innerHTML = names; 
+
+		// sortAlphabet function that sort above array alphabetically 
+		function sortAlphabet() { 
+			names.sort(); 
+			document.getElementById("demo").innerHTML = names; 
+		} 
+	</script> 
+
+	<button onclick="sortAlphabet()"> Sort </button> 
+</body> 
+
+</html> 
+
+sorted array by using the sort method
+
+<html> 
+<body> 
+	<p>Click on the Sort button to sort the array</p> 
+
+	<!-- button for click event --> 
+	<!-- onclick event is generated when the button is clicked--> 
+	<p id="demo"></p> 
+
+	<script> 
+
+	// array numbers 
+	var numbers = [7, 1, 6, 9,2]; 
+	document.getElementById("demo").innerHTML = numbers; 
+
+	//sortNumber function that sort the array --> 
+	function sortNumber() { 
+		numbers.sort(); 
+		document.getElementById("demo").innerHTML = numbers; 
+		} 
+	</script> 
+
+	<button onclick="sortNumber()"> Sort </button> 
+</body> 
+
+</html> 
+
