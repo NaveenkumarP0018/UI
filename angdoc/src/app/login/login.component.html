@@ -1,0 +1,72 @@
+<mat-card class="example-card">
+    <div class="example-container">
+      <form [formGroup]="loginform">
+        <div>
+          <mat-form-field>
+          <input matInput placeholder="Firstname" formControlName="Firstname" required>
+        </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field>
+          <input matInput placeholder="email" formControlName="email" required>
+          <mat-error *ngIf="loginform.controls.email.required">
+            you must entered a value
+          </mat-error>
+          <mat-error *ngIf="loginform.controls.email.invalid">
+            Not a valid email
+          </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+        <mat-form-field>
+          <input matInput placeholder="Enter your password" formControlName="password"
+           [type]="hide ? 'password' : 'text'" minlength="5" 
+          required>
+           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            
+          <mat-error *ngIf="loginform.controls.password.invalid">
+              please Enter Valid password
+            </mat-error>
+        </mat-form-field>
+      </div>
+    <div>
+      <mat-form-field>
+          <mat-select placeholder="Educational Qualifications" formControlName="dropdown" required>
+            <mat-option value="option">Select Any One</mat-option>
+            <mat-option value="option">Mca</mat-option>
+            <mat-option value="option">Mba</mat-option>
+            <mat-option value="option">B-tech</mat-option>
+            <mat-option value="option">Degree</mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+      </div>
+      <div>
+        <mat-form-field>
+          <textarea matInput placeholder="Address" formControlName="address" minlength="4" required></textarea>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="city" formControlName="city" required>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+        <input matInput placeholder="State" formControlName="State" required>
+      </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <input matInput placeholder="Pincode" #postal formControlName="postal" maxlength="6" required>
+          {{postal.value.length}}/6
+        </mat-form-field>
+      </div>
+      <div>
+          <button mat-raised-button [disabled]="loginform.invalid" (click)="getdetails($event)">clickme</button>
+        </div>
+      </form>
+    </div>
+    </mat-card>

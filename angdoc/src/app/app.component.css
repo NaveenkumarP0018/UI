@@ -1,0 +1,14 @@
+.example-container {
+    display:block;
+  }
+  
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+  .example-card {
+    max-width: 100%;
+  }
+/* .container{
+    display: flex;
+    justify-content: center;
+} */
